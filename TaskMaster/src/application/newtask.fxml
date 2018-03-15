@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.ComboBox?>
+
+<DialogPane fx:controller="ctrl.NewTaskController" xmlns="http://javafx.com/javafx/8.0.111"
+	xmlns:fx="http://javafx.com/fxml/1">
+	<content>
+		<GridPane vgap="10" hgap="10" >
+			<Label text="担当者" GridPane.rowIndex="1"
+				GridPane.columnIndex="0" />
+			<ComboBox fx:id="memberName" GridPane.rowIndex="1"
+				GridPane.columnIndex="1" />
+			
+			<Label text="期日(19990101)" GridPane.rowIndex="2"
+				GridPane.columnIndex="0" />
+			<TextField fx:id="deadline" GridPane.rowIndex="2" 
+				GridPane.columnIndex="1" />
+			
+			<Label text="詳細" GridPane.rowIndex="3"
+				GridPane.columnIndex="0" />
+			<TextField fx:id="details" GridPane.rowIndex="3" 
+				GridPane.columnIndex="1" />
+
+		</GridPane>
+	</content>
+</DialogPane>
+

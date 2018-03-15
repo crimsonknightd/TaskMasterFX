@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+
+<DialogPane fx:controller="ctrl.DetailsController" xmlns="http://javafx.com/javafx/8.0.111"
+	xmlns:fx="http://javafx.com/fxml/1">
+	<content>
+		<GridPane vgap="10" hgap="10" >
+			<Label text="タスク番号" GridPane.rowIndex="1"
+				GridPane.columnIndex="0" />
+			<TextField fx:id="taskNumber" GridPane.rowIndex="1"
+				GridPane.columnIndex="1" Editable="false" />
+			
+			<Label text="担当者" GridPane.rowIndex="2"
+				GridPane.columnIndex="0" />
+			<TextField fx:id="memberName" GridPane.rowIndex="2"
+				GridPane.columnIndex="1" Editable="false" />
+				
+			<Label text="開始日(19990101)" GridPane.rowIndex="3"
+				GridPane.columnIndex="0" />
+			<TextField fx:id="startDate" GridPane.rowIndex="3" 
+				GridPane.columnIndex="1" Editable="false" />
+			
+			<Label text="期日 (19990101)" GridPane.rowIndex="4"
+				GridPane.columnIndex="0" />
+			<TextField fx:id="deadline" GridPane.rowIndex="4" 
+				GridPane.columnIndex="1" Editable="false" />
+			
+			<Label text="詳細" GridPane.rowIndex="5"
+				GridPane.columnIndex="0" />
+			<TextField fx:id="details" GridPane.rowIndex="6" 
+				GridPane.columnIndex="0" GridPane.columnSpan="2" 
+				Editable="false" />
+			
+			<Label text="新しいコメント" GridPane.rowIndex="7" 
+				GridPane.columnIndex="0" />
+			<TextField fx:id="newComment" GridPane.rowIndex="8"
+				GridPane.columnIndex="0" GridPane.columnSpan="2" />
+			
+			<TableView fx:id="tableView" GridPane.rowIndex="9" 
+				GridPane.columnSpan="2">
+				<columns>
+					<TableColumn fx:id="commentUserName" text="名前" />
+					<TableColumn fx:id="comment" text="コメント" />
+					<TableColumn fx:id="commentTime" text="時間" />
+				</columns>
+			</TableView>
+
+		</GridPane>
+	</content>
+</DialogPane>
+

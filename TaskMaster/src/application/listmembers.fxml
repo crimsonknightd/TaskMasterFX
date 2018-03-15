@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Button?>
+
+
+<DialogPane fx:id="teamMembersPane" fx:controller="ctrl.TeamController" xmlns="http://javafx.com/javafx/8.0.111"
+	xmlns:fx="http://javafx.com/fxml/1">
+	<content>
+		<GridPane >
+			<TableView fx:id="tableView" GridPane.rowIndex="1">
+				<columns>
+					<TableColumn fx:id="userNumber" text="ユーザー番号" />
+					<TableColumn fx:id="memberName" text="メンバー名" />
+					<TableColumn fx:id="email" text="メールアドレス" />
+				</columns>
+			</TableView>
+		
+			<StackPane  GridPane.rowIndex="2">
+				<Label text="メンバーを追加" />
+				<Button text="メンバーを追加" fx:id="addToTeam" onAction="#addToTeam" style="-fx-opacity:0" />
+			</StackPane>
+		</GridPane>
+		
+	</content>
+</DialogPane>
+
